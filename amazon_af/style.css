@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-section, .output-section, .product-preview {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center; /* 追加 */
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    text-align: center; /* 追加 */
+}
+
+.input-section input[type="text"] {
+    width: 600px; /* 固定幅に変更 */
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0 auto 10px auto; /* 中央寄せ */
+    display: block; /* 中央寄せのためにブロック要素にする */
+}
+
+.input-section button, .output-section button {
+    padding: 12px 25px;
+    background-color: #ff9900; /* Amazonのブランドカラーに近い色 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* 追加 */
+}
+
+.input-section button:hover, .output-section button:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+.input-section button:active, .output-section button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .product-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card .product-price {
+    font-size: 1.5em;
+    color: #b12704; /* Amazonの価格表示に近い色 */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-card .buy-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .buy-button:hover {
+    background-color: #e68a00;
+    transform: translateY(-3px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+    .input-section input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .input-section button {
+        width: 100%;
+    }
+    .container {
+        padding: 15px;
+    }
+    .product-card img {
+        max-width: 150px;
+    }
+}
+
+.output-section textarea {
+    width: 600px; /* 固定幅に変更 */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    background-color: #f8f8f8;
+    resize: vertical;
+    box-sizing: border-box;
+    margin: 0 auto 15px auto; /* 中央寄せ */
+    display: block; /* 中央寄せのためにブロック要素にする */
+}
