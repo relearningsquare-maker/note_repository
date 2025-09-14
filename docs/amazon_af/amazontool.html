@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazonアフィリエイトパーツ生成ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Amazonアフィリエイトパーツ生成ツール</h1>
+        <div class="input-section">
+            <label for="amazonUrl">Amazon商品URL:</label>
+            <input type="text" id="amazonUrl" placeholder="Amazonの商品ページのURLを入力してください">
+            
+            <label for="productImageUrl">商品画像URL:</label>
+            <input type="text" id="productImageUrl" placeholder="商品の画像URLを入力してください">
+
+            <label for="productNameInput">商品名:</label>
+            <input type="text" id="productNameInput" placeholder="商品名を入力してください">
+
+            <label for="productPriceInput">価格:</label>
+            <input type="text" id="productPriceInput" placeholder="価格を入力してください (例: ￥1,980)">
+
+            <button id="generateButton">パーツ生成</button>
+        </div>
+
+        <div class="product-preview">
+            <h2>商品プレビュー</h2>
+            <div id="productInfo" class="product-card">
+                <p>商品情報を入力し「パーツ生成」ボタンを押してください。</p>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>生成されたHTMLコード</h2>
+            <textarea id="htmlOutput" rows="10" readonly></textarea>
+            <button id="copyButton">HTMLコードをコピー</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
